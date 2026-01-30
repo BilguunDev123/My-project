@@ -1,18 +1,18 @@
 # React Job App
 
-A simple job listing web application built with React and Vite.
+A simple job listing web application.
 
-## 🚀 Live Demo
-👉 https://YOUR-SITE.netlify.app
+# 🚀 Live Demo
+👉 https://lambent-alpaca-b03c03.netlify.app/
 
-## 📌 Features
+# 📌 Features
 - View job listings
 - Add new jobs
 - Edit existing jobs
 - Delete jobs
 - Responsive design
 
-## 🛠 Tech Stack
+# 🛠 Tech Stack
 - React
 - Vite
 - JavaScript
