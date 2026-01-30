@@ -37,7 +37,7 @@ const AddPage = ({ addJobSubmit }) => {
     try {
       const res = await addJobSubmit(newJob);
 
-      // addJobSubmit чинь Response буцаадаг бол:
+     
       if (res && res.ok === false) {
         const t = await res.text?.();
         throw new Error(t || "Add failed");

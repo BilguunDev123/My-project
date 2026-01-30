@@ -7,7 +7,7 @@ const EditJobPage = ({ updateJobSubmit }) => {
   const navigate = useNavigate();
   const { id } = useParams();
 
-  // Form state (initial values from loader data)
+  
   const [title, setTitle] = useState(job?.title || "");
   const [type, setType] = useState(job?.type || "Full-Time");
   const [location, setLocation] = useState(job?.location || "");

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import JobList from "./jobList";
 import Spinner from "./spinner";
+import { apiUrl } from "../config/api";
 
 const JobListing = ({ isHome = false, refreshKey = 0 }) => {
   const [jobs, setJobs] = useState([]);
@@ -8,10 +9,12 @@ const JobListing = ({ isHome = false, refreshKey = 0 }) => {
 
   useEffect(() => {
     const fetchJobs = async () => {
-      const apiUrl = isHome ? "/api/jobs?_limit=3" : "/api/jobs";
+      const url = isHome
+        ? apiUrl("/jobs?_limit=3")
+        : apiUrl("/jobs");
 
       try {
-        const res = await fetch(apiUrl);
+        const res = await fetch(url);
 
         if (!res.ok) {
           throw new Error(`HTTP error ${res.status}`);
@@ -27,7 +30,7 @@ const JobListing = ({ isHome = false, refreshKey = 0 }) => {
     };
 
     fetchJobs();
-  }, [isHome, refreshKey]); // ✅ refreshKey энд байна
+  }, [isHome, refreshKey]);
 
   return (
     <section className="bg-blue-50 px-4 py-10">
