@@ -1,6 +1,6 @@
 # React Job App
 
-A simple job listing web application.
+A simple job listing web.
 
 # 🚀 Live Demo
 👉 https://lambent-alpaca-b03c03.netlify.app/
